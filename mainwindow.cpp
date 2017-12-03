@@ -8,7 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
 {
 
    ui->setupUi(this);
-   //ui->HW1->setVisible(true);
+
+
+   //connect slider with box:
    connect (ui->hw1_slider, SIGNAL(valueChanged(int)), ui->hw1_box, SLOT(setValue(int)) );
    connect (ui->hw2_slider, SIGNAL(valueChanged(int)), ui->hw2_box, SLOT(setValue(int)) );
    connect (ui->hw3_slider, SIGNAL(valueChanged(int)), ui->hw3_box, SLOT(setValue(int)) );
@@ -17,14 +19,15 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
    connect (ui->hw6_slider, SIGNAL(valueChanged(int)), ui->hw6_box, SLOT(setValue(int)) );
    connect (ui->hw7_slider, SIGNAL(valueChanged(int)), ui->hw7_box, SLOT(setValue(int)) );
    connect (ui->hw8_slider, SIGNAL(valueChanged(int)), ui->hw8_box, SLOT(setValue(int)) );
-
    connect (ui->mt1_slider, SIGNAL(valueChanged(int)), ui->mt1_box, SLOT(setValue(int)) );
    connect (ui->mt2_slider, SIGNAL(valueChanged(int)), ui->mt2_box, SLOT(setValue(int)) );
    connect (ui->final_slider, SIGNAL(valueChanged(int)), ui->final_box, SLOT(setValue(int)) );
 
+
    connect (ui->schemaA, SIGNAL(clicked(bool)), this, SLOT(useSchemaA()) );
+   connect (ui->schemaB, SIGNAL(clicked(bool)), this, SLOT(useSchemaB()) );
 
-
+   connect(ui->calc_b, SIGNAL(released()), this, SLOT(calculate()));
 }
 
 MainWindow::~MainWindow()
@@ -33,14 +36,32 @@ MainWindow::~MainWindow()
 }
 
 
+void MainWindow::calculate()
+{
+    m_hw [0] = ui->hw1_box->value();
+    m_hw [1] = ui->hw2_box->value();
+    m_hw [2] = ui->hw3_box->value();
+    m_hw [3] = ui->hw4_box->value();
+    m_hw [4] = ui->hw5_box->value();
+    m_hw [5] = ui->hw6_box->value();
+    m_hw [6] = ui->hw7_box->value();
+    m_hw [7] = ui->hw8_box->value();
+
+    m_mt [0] = ui->mt1_box->value();
+    m_mt [1] = ui->mt2_box->value();
+    m_final = ui->final_box->value();
+
+
+}
+
 void MainWindow::useSchemaA()
 {
-
+    m_calc->setSchema(SCHEMA_A);
 }
 
 void MainWindow::useSchemaB()
 {
-
+    m_calc->setSchema(SCHEMA_B);
 }
 
 void MainWindow::display()

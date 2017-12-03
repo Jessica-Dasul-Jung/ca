@@ -5,6 +5,8 @@
 #include <string>
 
 static const int HW_NUM = 7;
+static const int MT_NUM = 2;
+
 static const int SCHEMA_A = 0;
 static const int SCHEMA_B = 1;
 

@@ -6,9 +6,18 @@
 class Calc
 {
 public:
-    Calc(int schema);
+    Calc();
+    void setSchema(int schema);
+    int calcuateScore(int hw[], int mt[], int final);
+    void copyData(int hw[], int mt[], int final);
+    int calculateA();
+    int calculateB();
+
 private:
     int m_schema;
+    int m_hw[HW_NUM];
+    int m_mt[2];
+    int m_final;
 
 
 };

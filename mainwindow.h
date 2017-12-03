@@ -6,7 +6,7 @@
 #include <QPushButton>
 #include <QLabel>
 #include "globals.h"
-//#include <vector>
+#include <vector>
 #include <QSlider>
 #include <QScrollBar>
 #include <QVBoxLayout>
@@ -28,6 +28,7 @@ private slots: //find
     void display();
     void useSchemaA();
     void useSchemaB();
+    void calculate();
 
 private:
     Ui::MainWindow *ui;
@@ -49,7 +50,9 @@ private:
     QPushButton* grade_b;
     QPushButton* dist_b;
 
-
+    int m_hw[HW_NUM];
+    int m_mt[2];
+    int m_final;
 };
 
 #endif // MAINWINDOW_H
