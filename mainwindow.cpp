@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QtCore/QCoreApplication> //for app to function properly
 #include <string>
+#include <QCheckBox>
+#include <Qt>
 
 MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
     ,ui(new Ui::MainWindow)
@@ -51,16 +53,23 @@ void MainWindow::calculate()
     m_mt [1] = ui->mt2_box->value();
     m_final = ui->final_box->value();
 
-
+    double score = m_calc->calcuateScore(m_hw, m_mt, m_final);
+    ui->score_label->setText(QString::number(score));
 }
 
 void MainWindow::useSchemaA()
 {
+    if (ui->schemaB->checkState() == Qt::Checked)
+        ui->schemaB->setCheckState (Qt::Unchecked);
+
     m_calc->setSchema(SCHEMA_A);
 }
 
 void MainWindow::useSchemaB()
 {
+    if (ui->schemaA->checkState() == Qt::Checked)
+        ui->schemaA->setCheckState (Qt::Unchecked);
+
     m_calc->setSchema(SCHEMA_B);
 }
 

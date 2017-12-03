@@ -3,6 +3,7 @@
 
 
 #include <string>
+#include <QString>
 
 static const int HW_NUM = 7;
 static const int MT_NUM = 2;

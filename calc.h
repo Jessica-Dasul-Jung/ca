@@ -8,16 +8,18 @@ class Calc
 public:
     Calc();
     void setSchema(int schema);
-    int calcuateScore(int hw[], int mt[], int final);
+    double calcuateScore(int hw[], int mt[], int final);
     void copyData(int hw[], int mt[], int final);
-    int calculateA();
-    int calculateB();
+    double calculateA();
+    double calculateB();
 
 private:
     int m_schema;
     int m_hw[HW_NUM];
     int m_mt[2];
     int m_final;
+    int m_lowestindex;
+    double m_hwscore;
 
 
 };
