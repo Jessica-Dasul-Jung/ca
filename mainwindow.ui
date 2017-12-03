@@ -66,7 +66,7 @@
      <string>HW 2</string>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider_2">
+   <widget class="QSlider" name="hw1_slider">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -166,7 +166,7 @@
      <string>HW 8</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="hw1_box">
     <property name="geometry">
      <rect>
       <x>270</x>
