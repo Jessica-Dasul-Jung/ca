@@ -175,6 +175,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QComboBox" name="course_box">
     <property name="geometry">
@@ -283,6 +286,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSlider" name="hw2_slider">
     <property name="geometry">
@@ -336,6 +342,9 @@
       <width>42</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QSlider" name="hw4_slider">
@@ -457,6 +466,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="hw5_box">
     <property name="geometry">
@@ -466,6 +478,9 @@
       <width>42</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QSpinBox" name="hw6_box">
@@ -477,6 +492,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="hw7_box">
     <property name="geometry">
@@ -487,6 +505,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="hw8_box">
     <property name="geometry">
@@ -496,6 +517,9 @@
       <width>42</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QSlider" name="mt1_slider">
@@ -529,6 +553,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSlider" name="mt2_slider">
     <property name="geometry">
@@ -561,6 +588,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSlider" name="final_slider">
     <property name="geometry">
@@ -592,6 +622,9 @@
       <width>331</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QPushButton" name="calc_b">

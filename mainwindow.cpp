@@ -25,6 +25,17 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
    connect (ui->final_slider, SIGNAL(valueChanged(int)), ui->final_box, SLOT(setValue(int)) );
 
 
+   //the other way around:
+   connect (ui->hw1_box, SIGNAL(valueChanged(int)), ui->hw1_slider, SLOT(setValue(int)) );
+   connect (ui->hw2_box, SIGNAL(valueChanged(int)), ui->hw2_slider, SLOT(setValue(int)) );
+   connect (ui->hw3_box, SIGNAL(valueChanged(int)), ui->hw3_slider, SLOT(setValue(int)) );
+   connect (ui->hw4_box, SIGNAL(valueChanged(int)), ui->hw4_slider, SLOT(setValue(int)) );
+   connect (ui->hw5_box, SIGNAL(valueChanged(int)), ui->hw5_slider, SLOT(setValue(int)) );
+   connect (ui->hw6_box, SIGNAL(valueChanged(int)), ui->hw6_slider, SLOT(setValue(int)) );
+   connect (ui->hw7_box, SIGNAL(valueChanged(int)), ui->hw7_slider, SLOT(setValue(int)) );
+   connect (ui->hw8_box, SIGNAL(valueChanged(int)), ui->hw8_slider, SLOT(setValue(int)) );
+
+
    connect (ui->schemaA, SIGNAL(clicked(bool)), this, SLOT(useSchemaA()) );
    connect (ui->schemaB, SIGNAL(clicked(bool)), this, SLOT(useSchemaB()) );
 
