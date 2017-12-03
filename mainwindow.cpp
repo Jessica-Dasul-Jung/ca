@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
 
    ui->setupUi(this);
 
-
    //connect slider with box:
    connect (ui->hw1_slider, SIGNAL(valueChanged(int)), ui->hw1_box, SLOT(setValue(int)) );
    connect (ui->hw2_slider, SIGNAL(valueChanged(int)), ui->hw2_box, SLOT(setValue(int)) );
@@ -53,8 +52,19 @@ void MainWindow::calculate()
     m_mt [1] = ui->mt2_box->value();
     m_final = ui->final_box->value();
 
-    double score = m_calc->calcuateScore(m_hw, m_mt, m_final);
-    ui->score_label->setText(QString::number(score));
+    if (ui->course_box->currentIndex() == 1) //PIC10B
+    {
+        double bscore = m_calc->calculatePIC10B(m_hw, m_mt, m_final);
+        ui->score_label->setText(QString::number(bscore));
+
+    }
+    else //PIC 10C
+    {
+        double score = m_calc->calcuateScore(m_hw, m_mt, m_final);
+        ui->score_label->setText(QString::number(score));
+    }
+
+
 }
 
 void MainWindow::useSchemaA()

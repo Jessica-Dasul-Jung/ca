@@ -12,6 +12,7 @@ public:
     void copyData(int hw[], int mt[], int final);
     double calculateA();
     double calculateB();
+    double calculatePIC10B(int hw[], int mt[], int final);
 
 private:
     int m_schema;

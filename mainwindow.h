@@ -25,7 +25,6 @@ public:
     ~MainWindow();
 
 private slots: //find
-    void display();
     void useSchemaA();
     void useSchemaB();
     void calculate();
@@ -33,23 +32,6 @@ private slots: //find
 private:
     Ui::MainWindow *ui;
     Calc* m_calc;
-
-    //LABELS:
-    QLabel* coursel;
-    QLabel* hwl [8];
-    QLabel* midterml [2];
-    QLabel* finall;
-    QLabel* settingl;
-    QLabel* schemal[2];
-    QLabel* scorel;
-    QLabel* scorenum;
-
-    //SLIDER
-    QSlider* hws [8];
-    QScrollBar* hwb [8];
-    QPushButton* grade_b;
-    QPushButton* dist_b;
-
     int m_hw[HW_NUM];
     int m_mt[2];
     int m_final;

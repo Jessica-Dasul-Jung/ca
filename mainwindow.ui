@@ -176,7 +176,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="course_box">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -187,22 +187,12 @@
     </property>
     <item>
      <property name="text">
-      <string>PIC 10A: Introduction to Programming</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>PIC 10B: Intermediate Programming</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>PIC 10C: Advanced Programming</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>MATH 61: Discrete Mathematics</string>
+      <string>PIC 10B: Intermediate Programming</string>
      </property>
     </item>
    </widget>

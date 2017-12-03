@@ -79,3 +79,25 @@ double Calc::calculateB()
     double overall = m_hwscore + mt + final;
     return overall;
 }
+
+
+double Calc::calculatePIC10B(int hw[], int mt[], int final)
+{
+    /*
+    Arbitrary Percentage:
+    HW = 20% (no drops)
+    MIDTERM = 30% (both included) (15% each)
+    FINAL = 50%
+    */
+    copyData(hw, mt, final);
+
+    //calculate homework score:
+    m_hwscore = 0;
+    for (int i = 0; i < HW_NUM; i++)
+    {
+        m_hwscore += m_hw[i];
+    }
+    m_hwscore = (m_hwscore / 8) * 0.2;
+
+    return (m_hwscore + m_mt[0] * 0.15 + m_mt[2] * 0.15 + m_final * 0.5);
+}
