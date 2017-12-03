@@ -1,6 +1,10 @@
+
+
+
 #include "calc.h"
 
-Calc::Calc()
+Calc::Calc(int schema)
+    :m_schema(schema)
 {
 
 }

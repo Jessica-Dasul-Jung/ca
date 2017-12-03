@@ -22,11 +22,25 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
    connect (ui->mt2_slider, SIGNAL(valueChanged(int)), ui->mt2_box, SLOT(setValue(int)) );
    connect (ui->final_slider, SIGNAL(valueChanged(int)), ui->final_box, SLOT(setValue(int)) );
 
+   connect (ui->schemaA, SIGNAL(clicked(bool)), this, SLOT(useSchemaA()) );
+
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::useSchemaA()
+{
+
+}
+
+void MainWindow::useSchemaB()
+{
+
 }
 
 void MainWindow::display()
